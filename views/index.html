@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Welcome to Glitch!</title>
+    <meta name="description" content="A cool thing made with Glitch" />
+    <link
+      id="favicon"
+      rel="icon"
+      href="https://glitch.com/edit/favicon-app.ico"
+      type="image/x-icon"
+    />
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- import the webpage's stylesheet -->
+    <link rel="stylesheet" href="/style.css" />
+
+    <!-- import the webpage's client-side javascript file -->
+    <script src="/client.js" defer></script>
+  </head>
+  <body>
+    <h1>Image search abstraction layer</h1>
+    <p>
+      The app allows you to search for images on Pixabay on the route
+      "/api/imagesearch/:term". The app returns an array of objects with the
+      following properties: largeImageURL, pageURL and tags.
+    </p>
+    <p>You can add "?offset=" parameter for pagination.</p>
+    <p>
+      A request on the route "/api/latest/imagesearch/" returns the latest ten
+      search requests.
+    </p>
+    <h2>Example usage:</h2>
+    <code>/api/imagesearch/apples</code><br />
+    <code>/api/imagesearch/pears?offset=2</code><br />
+    <code>/api/latest/imagesearch/</code><br />
+    <h2>Example returns:</h2>
+    <code
+      >[{"largeImageURL":"https://pixabay.com/get/54e5d3414c53b108f5d084609629327f123adeec554c704c7d2e79d7934acc59_1280.jpg","pageURL":"https://pixabay.com/photos/apple-red-delicious-fruit-apple-256261/","tags":"apple,
+      red, delicious"},...]</code
+    ><br />
+    <code
+      >[{"largeImageURL":"https://pixabay.com/get/57e2d4404a56ad14f6da8c7dda79367b1438dbe55a576c4870277ad69448c75dba_1280.jpg","pageURL":"https://pixabay.com/photos/fruit-vitamins-health-sweet-1213041/","tags":"fruit,
+      vitamins, health"},...]</code
+    ><br />
+    <code
+      >[{"term":"pears","date":"2020-02-09T08:00:52.394Z"},{"term":"apples","date":"2020-02-09T07:53:11.639Z"},...]</code
+    ><br />
+  </body>
+</html>
